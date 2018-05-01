@@ -52,23 +52,54 @@ body {
 }
 
 .details p {
-    font-size: 4vh;
+    font-size: 2.5vh;
     color: #fff;
 }
 
+.sm {
+    font-size: 1.5vh;
+    color: #fff;
+}
+
+.category {
+    font-size: 1.5vh;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-top: 8vh;
+}
+
+
 #date {
-    font-size: 6vh;
+    font-size: 3.5vh;
+    margin: 0px;
 }
 
 #address {
-    margin-top: 12vh;
-    font-size: 2vh;
+    margin:8vh 0px;
+    font-size: 1.5vh;
 }
 
 #speakers {
-    position: absolute;
-    bottom: 4vw;
-    left: 4vw;
+    position: relative;
+}
+
+.CTA {
+    width: 18vw;
+    border: 1px solid #fff;
+    background: #fff;
+    font-size: 2.5vh;
+    margin: 6vh 0px;
+    padding: 1.5vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.CTA:hover {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: -5px 5px #fff;
 }
 
 
