@@ -16,7 +16,7 @@ body {
     position: absolute;
     left: 0px;
     top: 0px;
-    width: 75vw;
+    width: 65vw;
     height: 100vh;
 }
 
@@ -44,7 +44,7 @@ body {
     position: fixed;
     right: 0px;
     top: 0px;
-    width: 25vw;
+    width: 35vw;
     height: 100vh;
     background: #000;
     font-family: Helvetica, sans-serif;
@@ -70,7 +70,7 @@ body {
 
 
 #date {
-    font-size: 3.5vh;
+    font-size: 5vh;
     margin: 0px;
 }
 
@@ -93,6 +93,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
+    position: static;
 }
 
 .CTA:hover {
@@ -254,11 +255,16 @@ body {
         right: 0px;
         top: 0px;
         width: 100vw;
-        height: 100vh;
+        height: 130vh;
         background: #000;
         font-family: Helvetica, sans-serif;
         padding: 4vh;
     }
+
+    .details p {
+        font-size: 3vh;
+    }
+
 
     .title {
         font-size: 5vh;
@@ -272,7 +278,8 @@ body {
     }
 
     #date {
-        font-size: 8vh;
+        font-size: 7vh;
+        position: relative;
     }
     
     #address {
@@ -282,8 +289,30 @@ body {
     
     #speakers {
         font-size: 5vh;
-        position: absolute;
-        bottom: 4vw;
-        left: 8vw;
+        position: relative;
+    }
+
+    .sm {
+        font-size: 1.75vh;
+    }
+
+    .CTA {
+        width: 40vw;
+    }
+
+}
+
+
+
+/* -----------------------------  XL  ---------------------------------*/
+
+@media screen and (min-width: 1400px) {
+
+    .float_contain {
+        width: 70vw;
+    }
+    
+    .details {
+        width: 30vw;
     }
 }
