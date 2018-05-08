@@ -236,6 +236,7 @@ body {
         position: relative;
         background: #fff;
         width: 88vw;
+        max-width: 400px;
         height: 76vh;
         margin: 12vh auto;
         padding: 4vh;
@@ -247,6 +248,7 @@ body {
     .container {
         position: relative;
         width: 74vw;
+        max-width: 335px;
         height: 80vh;
     }
 
