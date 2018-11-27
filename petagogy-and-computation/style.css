@@ -1,0 +1,162 @@
+/* CSS files add styling rules to your content */
+
+body {
+  font-family:Roboto Mono, sans-serif;
+  color:#fff;
+  padding:0;
+  margin:0;
+  background-color: black;
+}
+
+h1, h2, h3, h4, h5, p, h6, a {
+  font-size:30px;
+  font-weight:400;
+  font-style:normal;
+  padding:0;
+  margin:0;
+}
+
+canvas {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0; 
+}
+
+h2.subtitle, h3.speaker-title, h3.moderator, h3.student-title, .button h5, h4.details-date1 {
+  text-transform:uppercase;
+}
+
+.text {
+  padding:40px;
+}
+
+
+/* register button */
+
+
+h5, h6 {
+  display:inline-block;
+}
+
+a, h5 {
+  color:#fff; 
+  text-decoration:underline;
+}
+
+h6.arrow {
+  display:inline-block;
+}
+
+/* designed by Kate line */
+
+
+.credit {
+  right:40px;
+  bottom:40px;
+  float:right;
+  font-size:14px;
+  position:fixed;
+}
+  
+
+
+/* blinking cursor */
+
+
+.blinking-cursor {
+  position:absolute;
+  margin-left:-5px;
+  margin-top:-4px;
+  font-weight: 700;
+  font-size: 30px;
+  color: #2E3D48;
+  text-indent:0;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+@keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-moz-keyframes blink {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-webkit-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-ms-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+@-o-keyframes "blink" {
+  from, to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+
+@media (max-width: 700px) {
+  
+  body {
+    animation: pulse 1s infinite;
+    animation-delay: 10s;
+  }
+  
+  .credit {
+    font-size:14px;
+    display:none;
+  }
+  
+  @keyframes pulse {
+  0% {
+    background-color: rgb(0,0,255);
+  }
+  
+  25% {
+    background-color: rgb(255,0,255);
+  }
+  
+  50% {
+    background-color: rgb(255,255,0);
+  }
+  
+  75% {
+    background-color: rgb(0,255,0);
+  }
+  
+  100% {
+    background-color: rgb(0,0,0);
+  }
+
+  
+}
