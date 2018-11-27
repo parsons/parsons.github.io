@@ -54,7 +54,7 @@ function typer() {
 
             if (counter >=  4 && counter < 13) {
               $("h2.subtitle").append($(".blinking-cursor"));
-              $(".subtitle-content").append(h2content[counter-5] + " ");
+              $(".subtitle-content").append(h2content[counter-4] + " ");
             }
 
             //speakers 
