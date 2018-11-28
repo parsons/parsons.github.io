@@ -31,6 +31,14 @@ h2.subtitle, h3.speaker-title, h3.moderator, h3.student-title, .button h5, h4.de
   padding:40px;
 }
 
+.speaker-title, .speaker1, .speaker2, .speaker3, .speaker4, .moderator, .moderator1 {
+  display: none;
+}
+
+.student-title, .student1, .student2, .details, .button {
+  display: none;
+}
+
 
 /* register button */
 

@@ -7,7 +7,7 @@ var h1content = ["Parsons","Communication","Design","Symposium:"];
 var h2content = ["The","Pedagogy","of","Design","in","the","Age","of","Computation"];
 var h3content = ["Panelists"];
 var h3speaker1name = ["— Atıf","Akın"];
-var h3speaker1 = ["Associate","Professor","in","Design","at","Rutgers","University"];
+var h3speaker1 = ["Associate","Professor","in","Design,","Rutgers","University"];
 var h3speaker2name = ["— Taeyoon","Choi"];
 var h3speaker2 = ["Co-founder,","School","for","Poetic","Computation"];
 var h3speaker3name = ["— Rik","Lomas"];
@@ -18,7 +18,7 @@ var h3speaker4 = ["Fellow,","Berkman","Klein","Center","for","the","Internet","a
 
 var h3moderator = ["Moderated","by"];
 var h3moderator1name = ["— Juliette","Cezzar"];
-var h3moderator1 = ["Assistant","Professor","of","Communication","Design","at","Parsons"];
+var h3moderator1 = ["Assistant","Professor","of","Communication","Design,","Parsons","School","of","Design"];
 
 
 var h3studenttitle = ["Student","Presenters"];
@@ -44,7 +44,7 @@ var counter = 0;
 
 function typer() {
   
-   $(window).scrollTop(1000);
+   
 
             // title
 
@@ -60,7 +60,8 @@ function typer() {
             //speakers 
 
             if (counter >=  13 && counter < 14) {
-              $("h3.speaker-title").append($(".blinking-cursor"));
+              
+              $("h3.speaker-title").show().append($(".blinking-cursor"));
               $(".speaker-title-content").append(h3content[counter-13] + " ");
             } 
             
@@ -72,143 +73,145 @@ function typer() {
               $(".speaker-1-name").append(h3speaker1name[counter-14] + " ");
             }
             
-            if (counter >=  16 && counter < 23) {
-              $("h3.speaker1").append($(".blinking-cursor"));
-              $(".speaker-1-content").append(h3speaker1[counter-15] + " ");
+            if (counter >=  16 && counter < 22) {
+              $("h3.speaker1").show().append($(".blinking-cursor"));
+              $(".speaker-1-content").append(h3speaker1[counter-16] + " ");
             }
             
             //speaker 2 - taeyoon choi
 
-            if (counter >=  23 && counter < 25) {
+            if (counter >=  22 && counter < 24) {
               $("h3.speaker2-name").append($(".blinking-cursor"));
-              $(".speaker-2-name").append(h3speaker2name[counter-23] + " ");
+              $(".speaker-2-name").append(h3speaker2name[counter-22] + " ");
             }
             
             
-            if (counter >=  25 && counter < 30) {
-              $("h3.speaker2").append($(".blinking-cursor"));
-              $(".speaker-2-content").append(h3speaker2[counter-25] + " ");
+            if (counter >=  24 && counter < 29) {
+              $("h3.speaker2").show().append($(".blinking-cursor"));
+              $(".speaker-2-content").append(h3speaker2[counter-24] + " ");
             }
 
             
             //speaker 3 - rik lomas
 
             
-            if (counter >=  30 && counter < 32) {
+            if (counter >=  29 && counter < 31) {
               $("h3.speaker3-name").append($(".blinking-cursor"));
-              $(".speaker-3-name").append(h3speaker3name[counter-30] + " ");
+              $(".speaker-3-name").append(h3speaker3name[counter-29] + " ");
             }
             
             
-              if (counter >=  32 && counter < 36) {
-              $("h3.speaker3").append($(".blinking-cursor"));
-              $(".speaker-3-content").append(h3speaker3[counter-32] + " ");
+              if (counter >=  31 && counter < 35) {
+              $("h3.speaker3").show().append($(".blinking-cursor"));
+              $(".speaker-3-content").append(h3speaker3[counter-31] + " ");
             }
             
             
             //speaker 3 - mindy seu
 
 
-            if (counter >=  36 && counter < 38) {
+            if (counter >=  35 && counter < 37) {
               $("h3.speaker4-name").append($(".blinking-cursor"));
-              $(".speaker-4-name").append(h3speaker4name[counter-36] + " ");      
+              $(".speaker-4-name").append(h3speaker4name[counter-35] + " ");      
             }
 
-            if (counter >=  38 && counter < 47) {
-              $("h3.speaker4").append($(".blinking-cursor"));
-              $(".speaker-4-content").append(h3speaker4[counter-38] + " ");      
+            if (counter >=  37 && counter < 46) {
+              $("h3.speaker4").show().append($(".blinking-cursor"));
+              $(".speaker-4-content").append(h3speaker4[counter-37] + " ");      
             }
 
             //moderator
 
 
-            if (counter >= 47 && counter < 49) {
-              $("h3.moderator").append($(".blinking-cursor"));
-              $(".moderator-content").append(h3moderator[counter-47] + " ");
+            if (counter >= 46 && counter < 48) {
+              $("h3.moderator").show().append($(".blinking-cursor"));
+              $(".moderator-content").append(h3moderator[counter-46] + " ");
             }
             
             
-            if (counter >= 49 && counter < 51) {
+            if (counter >= 48 && counter < 50) {
               $("h3.moderator1-name").append($(".blinking-cursor"));
-              $(".moderator-1-name").append(h3moderator1name[counter-49] + " ");
+              $(".moderator-1-name").append(h3moderator1name[counter-48] + " ");
             }
 
-            if (counter >= 51 && counter < 58) {
-              $("h3.moderator1").append($(".blinking-cursor"));
-              $(".moderator-1-content").append(h3moderator1[counter-51] + " ");
+            if (counter >= 50 && counter < 56) {
+              $("h3.moderator1").show().append($(".blinking-cursor"));
+              $(".moderator-1-content").append(h3moderator1[counter-50] + " ");
             }
 
               //students
 
 
-            if (counter >= 58 && counter < 60) {
-              $("h3.student-title").append($(".blinking-cursor"));
-              $(".student-title-content").append(h3studenttitle[counter-58] + " ");
+            if (counter >= 56 && counter < 58) {
+              $("h3.student-title").show().append($(".blinking-cursor"));
+              $(".student-title-content").append(h3studenttitle[counter-56] + " ");
             }
             
               //student 1 - rijk
             
             
-            if (counter >= 60 && counter < 62) {
+            if (counter >= 58 && counter < 60) {
               $("h3.student1-name").append($(".blinking-cursor"));
-              $(".student-1-name").append(h3student1name[counter-60] + " ");
+              $(".student-1-name").append(h3student1name[counter-58] + " ");
             }
 
 
-            if (counter >= 62 && counter < 65) {
-              $("h3.student1").append($(".blinking-cursor"));
-              $(".student-1-content").append(h3student1[counter-62] + " ");
+            if (counter >= 60 && counter < 63) {
+              $("h3.student1").show().append($(".blinking-cursor"));
+              $(".student-1-content").append(h3student1[counter-60] + " ");
             }
             
               //student 2 - jack
 
 
-            if (counter >= 65 && counter < 67) {
+            if (counter >= 63 && counter < 65) {
               $("h3.student2-name").append($(".blinking-cursor"));
-              $(".student-2-name").append(h3student2name[counter-65] + " ");
+              $(".student-2-name").append(h3student2name[counter-63] + " ");
             }
             
-            if (counter >= 67 && counter < 70) {
-              $("h3.student2").append($(".blinking-cursor"));
-              $(".student-2-content").append(h3student2[counter-67] + " ");
+            if (counter >= 65 && counter < 68) {
+              $("h3.student2").show().append($(".blinking-cursor"));
+              $(".student-2-content").append(h3student2[counter-65] + " ");
             }
 
               //details
 
 
-            if (counter >= 70 && counter < 75) {
+            if (counter >= 68 && counter < 73) {
+              $(".details").show();
               $("h4.details-date1").append($(".blinking-cursor"));
-              $(".details-1-content").append(h4detailsdate1[counter-70] + " ");
+              $(".details-1-content").append(h4detailsdate1[counter-68] + " ");
             }
 
-            if (counter >= 75 && counter < 79) {
+            if (counter >= 73 && counter < 77) {
               $("h4.details-date2").append($(".blinking-cursor"));
-              $(".details-2-content").append(h4detailsdate2[counter-75] + " ");
+              $(".details-2-content").append(h4detailsdate2[counter-73] + " ");
             }
 
-            if (counter >= 79 && counter < 85) {
+            if (counter >= 77 && counter < 83) {
               $("h4.details-date3").append($(".blinking-cursor"));
-              $(".details-3-content").append(h4detailsdate3[counter-79] + " ");
+              $(".details-3-content").append(h4detailsdate3[counter-77] + " ");
             }
 
                 //register button
 
-            if (counter >= 85 && counter < 86) {
-              $(".button").append($(".blinking-cursor"));
-              $(".register-content").append(h5content[counter-85] + " ");
+            if (counter >= 83 && counter < 84) {
+              $(".button").show().append($(".blinking-cursor"));
+              $(".register-content").append(h5content[counter-83] + " ");
             }
             
-            if (counter >= 86 && counter < 87) {
+            if (counter >= 84 && counter < 85) {
               $(".button").append($(".blinking-cursor"));
-              $(".arrow-content").append(arrowcontent[counter-86] + " ");
+              $(".arrow-content").append(arrowcontent[counter-84] + " ");
             }
             
-            if (counter >= 89 && counter < 90) {
-              $(".credit").append(credit[counter-89] + " ");
+            if (counter >= 87 && counter < 88) {
+              $(".credit").append(credit[counter-87] + " ");
             }
             
 
             counter++;  
+            $(window).scrollTop(1000);
   
 }
 
