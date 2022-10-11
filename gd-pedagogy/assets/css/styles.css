@@ -1,0 +1,328 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+
+body {
+    font-family:Roboto Mono, sans-serif;
+    background: white;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* -----------------------------  POSTER ELEMENTS  ---------------------------------*/
+
+.float_contain {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 65vw;
+    height: 100vh;
+}
+
+.wrapper {
+    position: relative;
+    background: #fff;
+    width: 62vh;
+    height: 88vh;
+    margin: 6vh auto;
+    padding: 4vh;
+    z-index: 2;
+    border: 1px solid #A4AAB3;
+}
+
+
+.container {
+    position: relative;
+    width: 54vh;
+    height: 80vh;
+}
+
+/* -----------------------------  SIDEBAR  ---------------------------------*/
+
+.details {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 35vw;
+    height: 100vh;
+    background: #000;
+    font-family: Helvetica, sans-serif;
+    padding: 4vw;
+}
+
+.details p {
+    font-size: 2.5vh;
+    color: #fff;
+}
+
+.sm {
+    font-size: 1.5vh;
+    color: #fff;
+}
+
+.category {
+    font-size: 1.5vh;
+    letter-spacing: 2px;
+    color: #fff;
+    margin-top: 8vh;
+}
+
+
+#date {
+    font-size: 5vh;
+    margin: 0px;
+}
+
+#address {
+    margin:8vh 0px;
+    font-size: 1.5vh;
+}
+
+#speakers {
+    position: relative;
+}
+
+.CTA {
+    width: 18vw;
+    border: 1px solid #fff;
+    background: #fff;
+    font-size: 2.5vh;
+    margin: 6vh 0px;
+    padding: 1.5vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    position: static;
+}
+
+.CTA:hover {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: -5px 5px #fff;
+}
+
+
+/* -----------------------------  CHARACTERISTICS  ---------------------------------*/
+
+h1, h2, h3, h4, h5, p, h6, a {
+  font-size:30px;
+  font-weight:400;
+  font-style:normal;
+  padding:0;
+  margin:0;
+}
+
+.title {
+    font-family: Fugue Head;
+    /* font-weight: bold; */
+    font-size: 6.5vh;
+    line-height: 7.5vh;
+}
+
+.shadow {
+    -moz-box-shadow:    40px 40px 100px #000;
+    -webkit-box-shadow: 40px 40px 100px #000;
+    box-shadow:         40px 40px 100px #000;
+  }
+
+
+ .c {
+     display: inline-block;
+ }
+
+ .spacer {
+     height: 6vh;
+     margin-bottom: 1vh;
+     vertical-align: bottom;
+ }
+
+ .l {
+     text-align: left;
+ }
+
+ .r {
+    text-align: right;
+}
+
+
+ .c1 {
+     width: 10%;
+ }
+ .c2 {
+    width: 20%;
+}
+.c3 {
+    width: 30%;
+}
+.c4 {
+    width: 40%;
+}
+.c5 {
+    width: 50%;
+}
+.c6 {
+    width: 60%;
+}
+.c7 {
+    width: 70%;
+}
+.c8 {
+    width: 80%;
+}
+.c9 {
+    width: 90%;
+}
+.c10 {
+    width: 100%;
+}
+
+/* -----------------------------  SLIDERS  ---------------------------------*/
+
+.slider {
+    margin-top: 2.8vh;
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 99%; /* Full-width */
+    height: 2px; /* Specified height */
+    background: #A4AAB3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+    opacity: 0.7; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 3.5vh; /* Set a specific slider handle width */
+    height: 3.5vh; /* Slider handle height */
+    border-radius: 100%;
+    cursor: pointer; /* Cursor on hover */
+    /* Knob: */
+    background: #FFFFFF;
+    border: 0 solid rgba(0,0,0,0.10);
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,0.05), 0 2px 2px 0 rgba(0,0,0,0.10), 0 3px 3px 0 rgba(0,0,0,0.05);
+}
+
+.slider::-moz-range-thumb {
+    width: 3.5vh; /* Set a specific slider handle width */
+    height: 3.5vh; /* Slider handle height */
+    border-radius: 100%;
+    cursor: pointer; /* Cursor on hover */
+    /* Knob: */
+    background: #FFFFFF;
+    border: 0 solid rgba(0,0,0,0.50);
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,0.05), 0 2px 2px 0 rgba(0,0,0,0.10), 0 3px 3px 0 rgba(0,0,0,0.05);
+}
+
+
+
+
+/* -----------------------------  MOBILE  ---------------------------------*/
+
+@media screen and (max-width: 760px) {
+
+    .float_contain {
+        position: relative;
+        left: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .wrapper {
+        position: relative;
+        background: #fff;
+        width: 88vw;
+        max-width: 400px;
+        height: 76vh;
+        margin: 12vh auto;
+        padding: 4vh;
+        z-index: 2;
+        border: 1px solid #A4AAB3;
+    }
+
+
+    .container {
+        position: relative;
+        width: 74vw;
+        max-width: 335px;
+        height: 80vh;
+    }
+
+    .details {
+        position: relative;
+        right: 0px;
+        top: 0px;
+        width: 100vw;
+        height: 130vh;
+        background: #000;
+        font-family: Helvetica, sans-serif;
+        padding: 4vh;
+    }
+
+    .details p {
+        font-size: 3vh;
+    }
+
+
+    .title {
+        font-size: 5vh;
+        line-height: 6vh;
+    }
+
+    .spacer {
+        height: 5vh;
+        margin-bottom: 1vh;
+        vertical-align: bottom;
+    }
+
+    #date {
+        font-size: 7vh;
+        position: relative;
+    }
+
+    #address {
+        margin-top: 12vh;
+        font-size: 3vh;
+    }
+
+    #speakers {
+        font-size: 5vh;
+        position: relative;
+    }
+
+    .sm {
+        font-size: 1.75vh;
+    }
+
+    .CTA {
+        width: 40vw;
+    }
+
+}
+
+
+
+/* -----------------------------  XL  ---------------------------------*/
+
+@media screen and (min-width: 1400px) {
+
+    .float_contain {
+        width: 70vw;
+    }
+
+    .details {
+        width: 30vw;
+    }
+}
