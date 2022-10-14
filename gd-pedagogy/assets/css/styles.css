@@ -23,16 +23,15 @@ hr {
     left: 0px;
     top: 0px;
     width: 65vw;
-    height: 100vh;
+
 }
 
 .wrapper {
     position: relative;
-    background: #fff;
-    width: 66vh;
-    height: 88vh;
+    background: #efeeed;
+    width: 88vh;
+
     margin: 6vh auto;
-    padding: 4vh;
     z-index: 2;
 }
 
@@ -40,7 +39,7 @@ hr {
 .container {
     position: relative;
     width: 54vh;
-    height: 80vh;
+        padding: 4vh;
 }
 
 /* -----------------------------  SIDEBAR  ---------------------------------*/
@@ -57,8 +56,9 @@ hr {
 }
 
 .details p {
-    font-size: 2.5vh;
-    color: #fff;
+    font-size: 2vh;
+    color: #efeeed;
+    line-height: 30px;
 }
 
 .sm {
@@ -259,7 +259,6 @@ p, a {
         max-width: 400px;
         height: 76vh;
         margin: 12vh auto;
-        padding: 4vh;
         z-index: 2;
     }
 
