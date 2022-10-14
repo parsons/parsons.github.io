@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: Roboto Mono, sans-serif;
+    font-family: 'Roboto Mono', sans-serif;
     background: white;
     color: black;
     padding: 0px;
@@ -48,7 +48,7 @@ body {
     width: 35vw;
     height: 100vh;
     background: #000;
-    font-family: Helvetica, sans-serif;
+    font-family: 'Roboto Mono', sans-serif;
     padding: 4vw;
 }
 
@@ -107,10 +107,17 @@ body {
 
 /* -----------------------------  CHARACTERISTICS  ---------------------------------*/
 
-h1, h2, h3, h4, h5, p, h6, a {
+h1, h2, h3, h4, h5, h6 {
   font-family: Fugue Head;
   font-size:30px;
-  font-weight:400;
+  font-style:normal;
+  padding:0;
+  margin:0;
+}
+
+p, a {
+  font-family: 'Roboto Mono', sans-serif;
+  font-size:30px;
   font-style:normal;
   padding:0;
   margin:0;
