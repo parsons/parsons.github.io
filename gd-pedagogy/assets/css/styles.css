@@ -42,6 +42,15 @@ hr {
         padding: 4vh;
 }
 
+.vl {
+  border-left: 1px solid #ff33ff;
+  height: 100%;
+  position: absolute;
+  left: 70%;
+  margin-left: -3px;
+  top: 0;
+}
+
 /* -----------------------------  SIDEBAR  ---------------------------------*/
 
 .details {
@@ -254,10 +263,9 @@ p, a {
 
     .wrapper {
         position: relative;
-        background: #fff;
+        background: #efeeed;
         width: 88vw;
         max-width: 400px;
-        height: 76vh;
         margin: 12vh auto;
         z-index: 2;
     }
@@ -267,7 +275,7 @@ p, a {
         position: relative;
         width: 74vw;
         max-width: 335px;
-        height: 80vh;
+      
     }
 
     .details {
