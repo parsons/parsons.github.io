@@ -146,6 +146,7 @@ box-shadow: 2px 4px 2px #777777 inset;
     letter-spacing: 2px;
     text-align: center;
     position: static;
+
 }
 
 .CTA:hover {
@@ -165,6 +166,7 @@ box-shadow: 2px 4px 2px #777777 inset;
     letter-spacing: 2px;
     text-align: center;
     position: static;
+
 }
 
 .CTA2:hover {
@@ -336,7 +338,18 @@ p, a {
 
     }
 
-
+    .dot3{
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    Right: 21%;
+    bottom: 21%;
+    background-color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    border: 0px solid;
+    box-shadow: 2px 4px 2px #777777 inset;
+    }
 
 
     .details {
@@ -351,7 +364,8 @@ p, a {
     }
 
     .details p {
-        font-size: 3vh;
+        font-size: 2vh;
+        line-height: 3vh;
     }
 
 
@@ -377,8 +391,9 @@ p, a {
     }
 
     #speakers {
-        font-size: 5vh;
+        font-size: 1vh;
         position: relative;
+        line-height: 2vh;
     }
 
     .sm {
@@ -387,6 +402,12 @@ p, a {
 
     .CTA {
         width: 40vw;
+        margin-right: 10px;
+
+    }
+    .CTA2 {
+        width: 40vw;
+
     }
 
 }
