@@ -11,6 +11,14 @@ body {
     margin: 0px;
 }
 
+body a:visited {
+    font-family: 'Roboto Mono', sans-serif;
+    background: white;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+}
+
 hr {
   width: 100%;
   margin: 30px 0 30px 0;
@@ -29,7 +37,7 @@ hr {
 .wrapper {
     position: relative;
     background: #efeeed;
-    width: 88vh;
+    width: 80vh;
 
     margin: 6vh auto;
     z-index: 2;
@@ -143,6 +151,20 @@ box-shadow: 2px 4px 2px #777777 inset;
     margin: 4vh 0px 1vh 0px;
     padding: 1.5vh;
     text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    position: static;
+
+}
+
+.CTA a: visited {
+    width: 18vw;
+    background: #33FFFF;
+    font-size: 2.5vh;
+    margin: 4vh 0px 1vh 0px;
+    padding: 1.5vh;
+    text-transform: uppercase;
+    color: black;
     letter-spacing: 2px;
     text-align: center;
     position: static;
