@@ -11,6 +11,11 @@ body {
     margin: 0px;
 }
 
+hr {
+  width: 100%;
+  margin: 30px 0 30px 0;
+  border-top: 1px solid #33FFFF;
+}
 /* -----------------------------  POSTER ELEMENTS  ---------------------------------*/
 
 .float_contain {
@@ -24,12 +29,11 @@ body {
 .wrapper {
     position: relative;
     background: #fff;
-    width: 62vh;
+    width: 66vh;
     height: 88vh;
     margin: 6vh auto;
     padding: 4vh;
     z-index: 2;
-    border: 1px solid #A4AAB3;
 }
 
 
@@ -86,7 +90,6 @@ body {
 
 .CTA {
     width: 18vw;
-    border: 1px solid #fff;
     background: #fff;
     font-size: 2.5vh;
     margin: 6vh 0px;
@@ -110,6 +113,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: Fugue Head;
   font-size:30px;
+  line-height: 30px;
   font-style:normal;
   padding:0;
   margin:0;
@@ -131,9 +135,9 @@ p, a {
 }
 
 .shadow {
-    -moz-box-shadow:    40px 40px 100px #000;
-    -webkit-box-shadow: 40px 40px 100px #000;
-    box-shadow:         40px 40px 100px #000;
+    -moz-box-shadow:    40px 40px 100px #ccc;
+    -webkit-box-shadow: 40px 40px 100px #ccc;
+    box-shadow:         40px 40px 100px #ccc;
   }
 
 
@@ -218,7 +222,7 @@ p, a {
     /* Knob: */
     background: #FFFFFF;
     border: 0 solid rgba(0,0,0,0.10);
-    box-shadow: 0 3px 1px 0 rgba(0,0,0,0.05), 0 2px 2px 0 rgba(0,0,0,0.10), 0 3px 3px 0 rgba(0,0,0,0.05);
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,0.02), 0 2px 2px 0 rgba(0,0,0,0.05), 0 3px 3px 0 rgba(0,0,0,0.02);
 }
 
 .slider::-moz-range-thumb {
@@ -229,7 +233,7 @@ p, a {
     /* Knob: */
     background: #FFFFFF;
     border: 0 solid rgba(0,0,0,0.50);
-    box-shadow: 0 3px 1px 0 rgba(0,0,0,0.05), 0 2px 2px 0 rgba(0,0,0,0.10), 0 3px 3px 0 rgba(0,0,0,0.05);
+    box-shadow: 0 3px 1px 0 rgba(0,0,0,0.02), 0 2px 2px 0 rgba(0,0,0,0.05), 0 3px 3px 0 rgba(0,0,0,0.02);
 }
 
 
@@ -257,7 +261,6 @@ p, a {
         margin: 12vh auto;
         padding: 4vh;
         z-index: 2;
-        border: 1px solid #A4AAB3;
     }
 
 
