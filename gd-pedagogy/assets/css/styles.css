@@ -46,9 +46,48 @@ hr {
   border-left: 1px solid #ff33ff;
   height: 100%;
   position: absolute;
-  left: 70%;
+  left: 72%;
   margin-left: -3px;
   top: 0;
+}
+
+.dot1{
+height: 40px;
+width: 40px;
+position: absolute;
+Right: 12%;
+bottom: 12%;
+background-color: #fff;
+border-radius: 50%;
+display: inline-block;
+border: 0px solid;
+box-shadow: 2px 4px 2px #777777 inset;
+}
+
+.dot2{
+height: 40px;
+width: 40px;
+position: absolute;
+Right: 30%;
+bottom: 12%;
+background-color: #fff;
+border-radius: 50%;
+display: inline-block;
+border: 0px solid;
+box-shadow: 2px 4px 2px #777777 inset;
+}
+
+.dot3{
+height: 40px;
+width: 40px;
+position: absolute;
+Right: 21%;
+bottom: 30%;
+background-color: #fff;
+border-radius: 50%;
+display: inline-block;
+border: 0px solid;
+box-shadow: 2px 4px 2px #777777 inset;
 }
 
 /* -----------------------------  SIDEBAR  ---------------------------------*/
@@ -67,7 +106,7 @@ hr {
 .details p {
     font-size: 2vh;
     color: #efeeed;
-    line-height: 30px;
+    line-height: 3vh;
 }
 
 .sm {
@@ -99,9 +138,9 @@ hr {
 
 .CTA {
     width: 18vw;
-    background: #fff;
+    background: #33FFFF;
     font-size: 2.5vh;
-    margin: 6vh 0px;
+    margin: 4vh 0px 1vh 0px;
     padding: 1.5vh;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -110,6 +149,25 @@ hr {
 }
 
 .CTA:hover {
+    background: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: -5px 5px #fff;
+}
+
+.CTA2 {
+    width: 18vw;
+    background: #ff33ff;
+    font-size: 2.5vh;
+    margin: 1vh 0px 4vh 0px;
+    padding: 1.5vh;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    position: static;
+}
+
+.CTA2:hover {
     background: #000;
     color: #fff;
     cursor: pointer;
@@ -275,8 +333,11 @@ p, a {
         position: relative;
         width: 74vw;
         max-width: 335px;
-      
+
     }
+
+
+
 
     .details {
         position: relative;
