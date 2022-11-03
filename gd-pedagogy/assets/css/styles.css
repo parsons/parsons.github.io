@@ -90,15 +90,18 @@ height: 40px;
 width: 40px;
 position: absolute;
 Right: 21%;
-bottom: 30%;
+bottom: 21%;
 background-color: #fff;
 border-radius: 50%;
 display: inline-block;
 border: 0px solid;
 box-shadow: 2px 4px 2px #777777 inset;
 }
-
+.schedule {
+  margin-left: 4vh;
+}
 /* -----------------------------  SIDEBAR  ---------------------------------*/
+
 
 .details {
     position: fixed;
@@ -212,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p, a {
   font-family: 'Roboto Mono', sans-serif;
-  font-size:30px;
+  font-size:20px;
   font-style:normal;
   padding:0;
   margin:0;
@@ -386,7 +389,7 @@ p, a {
     }
 
     .details p {
-        font-size: 2vh;
+        font-size: 12vh;
         line-height: 3vh;
     }
 
