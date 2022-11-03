@@ -343,7 +343,7 @@ p, a {
         top: 0px;
         width: 100vw;
         height: 200vh;
-        overflow: hidden;
+        /* overflow: hidden; */
     }
 
     .wrapper {
