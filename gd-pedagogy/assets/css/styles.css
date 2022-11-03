@@ -367,8 +367,8 @@ p, a {
     height: 40px;
     width: 40px;
     position: absolute;
-    Right: 21%;
-    bottom: 21%;
+    right: 21%;
+    bottom: 16%;
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
