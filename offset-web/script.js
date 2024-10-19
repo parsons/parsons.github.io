@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const caseSelected = Math.floor(Math.random() * 4);
+    const caseSelected = Math.floor(Math.random() * 3); // Updated to choose between 3 cases (0, 1, 2)
 
     document.addEventListener("scroll", function() {
         const scrollPosition = window.scrollY;
@@ -63,27 +63,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
             const startSvgColor = { r: 0, g: 0, b: 0 }; // black
             const endSvgColor = { r: 190, g: 230, b: 238 }; // #BEE6EE
-
-            const rSvg = Math.floor(startSvgColor.r + (endSvgColor.r - startSvgColor.r) * scrollRatioSvg);
-            const gSvg = Math.floor(startSvgColor.g + (endSvgColor.g - startSvgColor.g) * scrollRatioSvg);
-            const bSvg = Math.floor(startSvgColor.b + (endSvgColor.b - startSvgColor.b) * scrollRatioSvg);
-            const svgElements = document.querySelectorAll("svg path, svg rect, svg circle");
-            svgElements.forEach(element => {
-                element.setAttribute("fill", `rgb(${rSvg}, ${gSvg}, ${bSvg})`);
-            });
-
-        } else if (caseSelected === 3) {
-    // CASE 4
-            const startBgColor = { r: 255, g: 255, b: 255 }; // white
-            const endBgColor = { r: 245, g: 91, b: 29 };  // #F55B1D
-
-            const rBg = Math.floor(startBgColor.r + (endBgColor.r - startBgColor.r) * scrollRatioBg);
-            const gBg = Math.floor(startBgColor.g + (endBgColor.g - startBgColor.g) * scrollRatioBg);
-            const bBg = Math.floor(startBgColor.b + (endBgColor.b - startBgColor.b) * scrollRatioBg);
-            document.body.style.backgroundColor = `rgb(${rBg}, ${gBg}, ${bBg})`;
-
-            const startSvgColor = { r: 0, g: 0, b: 0 }; // black
-            const endSvgColor = { r: 251, g: 254, b: 103 }; // #FBFE67
 
             const rSvg = Math.floor(startSvgColor.r + (endSvgColor.r - startSvgColor.r) * scrollRatioSvg);
             const gSvg = Math.floor(startSvgColor.g + (endSvgColor.g - startSvgColor.g) * scrollRatioSvg);
