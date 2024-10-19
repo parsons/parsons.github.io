@@ -6,13 +6,16 @@ body {
 
 .content {
   padding: 20px;
-  margin-bottom: -45px;
+  /* margin-bottom: -45px; */
 }
 
 h1 {
   font-size: x-large;
   font-family: stevie-sans, sans-serif;
   font-weight: 400;
+  display: inline;
+  align-items: center; 
+  justify-content: center;
 }
 
 h3 {
@@ -35,26 +38,27 @@ h4 {
 }
 
 .one {
-  width: 200px;
+  width: 20vw;
   display: block;
 }
 
 .two {
-  width: 250px;
+  width: 18vw;
   display: block;
 }
 
 .wrapper-2 {
   display: block;
-  margin-top: 160px;
-  height: 540px;
-  width: 650px;
+  margin-top: 20vh;
+  height: 65vh;
+  width: 43vw;
 }
 
 .dot {
   height: 130px;
   width: 130px;
   background-color: #D5DF35;
+  color: black;
   border-radius: 50%;
   display: inline-flex;
   margin-left: 190px;
@@ -65,8 +69,19 @@ h4 {
   font-weight: 400; 
 }
 
-.dot :hover {
+.dot:hover {
   color: beige;
+}
+
+.little-dot {
+  height: 30px;
+  width: 30px;
+  background-color: #D5DF35;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  right: 2vw;
+  bottom: 2.2vh;
 }
 
 .logo {
@@ -76,7 +91,11 @@ h4 {
 
 a {
   text-decoration: none;
-  color :black;
+  color: black;
+}
+
+a:hover {
+  color: beige;
 }
 
 h4 :hover {
@@ -85,11 +104,17 @@ h4 :hover {
 
 .foot-container {
   display: flex;
+  position: relative;
+  width: 100vw;
+  height: auto;
+  overflow:hidden;
   margin-bottom: -65px;
+  z-index: -10;
 }
 
 .footer-text {
-  display: block;
+  display: flex;
+  position: relative;
   text-align: left;
   padding-left: 20px;
 }
@@ -102,7 +127,13 @@ h4 :hover {
   .m-footer {
     display: none;
   }
+
+  .m-footer-text {
+    display: none;
+  }
 }
+
+
 
 /* MOBILE */
 @media (max-width: 450px) {
@@ -119,11 +150,19 @@ h4 :hover {
     display: none;
   }
 
+  .foot-container {
+    display: none;
+  }
+
   .wrapper {
     display: none;
   }
 
   .wrapper-2 {
+    display: none;
+  }
+
+  .little-dot {
     display: none;
   }
 
@@ -155,6 +194,7 @@ h4 :hover {
   .m-one {
     text-align: left;
     display: block;
+    position: relative;
     align-content: start;
   }
 
@@ -183,23 +223,41 @@ h4 :hover {
 
   .m-wrapper-2 {
     display: block;
-    margin-top: 110px;
-    margin-bottom: -100px;
+    margin-top: 10vh;
+    width: 65vw;
   }
 
   .m-footer {
-    display: block;
+    display: flex;
+    position: relative;
+    width: 100vw;
   }
 
   .m-foot-container {
     display: flex;
+    position: relative;
+    width: 100vw;
+    height: 28vh;
+    overflow: hidden; 
   }
 
   .m-footer-text {
-    display: block;
+    display: flex;
+    position: relative;
     text-align: left;
     margin-top: -40px;
     padding-left: 20px;
+  }
+
+  .m-little-dot {
+      height: 15px;
+      width: 15px;
+      background-color: #D5DF35;
+      border-radius: 50%;
+      display: inline-block;
+      position: absolute;
+      right: 4vw;
+      bottom: 1vh;
   }
 
 }
