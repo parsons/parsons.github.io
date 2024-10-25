@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const caseSelected = Math.floor(Math.random() * 3); // Updated to choose between 3 cases (0, 1, 2)
+    const caseSelected = Math.floor(Math.random() * 3); 
 
     document.addEventListener("scroll", function() {
         const scrollPosition = window.scrollY;
@@ -10,7 +10,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const scrollRatioSvg = Math.min(scrollPosition / maxScrollSvg, 1);
 
         if (caseSelected === 0) {
-    // CASE 1
+
+            // CASE 1
             const startBgColor = { r: 255, g: 255, b: 255 }; // white
             const endBgColor = { r: 254, g: 178, b: 206 }; // #FEB2CE
 
@@ -25,13 +26,14 @@ document.addEventListener("DOMContentLoaded", function() {
             const rSvg = Math.floor(startSvgColor.r + (endSvgColor.r - startSvgColor.r) * scrollRatioSvg);
             const gSvg = Math.floor(startSvgColor.g + (endSvgColor.g - startSvgColor.g) * scrollRatioSvg);
             const bSvg = Math.floor(startSvgColor.b + (endSvgColor.b - startSvgColor.b) * scrollRatioSvg);
-            const svgElements = document.querySelectorAll("svg path, svg rect, svg circle");
+            const svgElements = document.querySelectorAll("svg:not(.svg-opp) path, svg:not(.svg-opp) rect, svg:not(.svg-opp) circle");
             svgElements.forEach(element => {
                 element.setAttribute("fill", `rgb(${rSvg}, ${gSvg}, ${bSvg})`);
             });
-
+    
         } else if (caseSelected === 1) {
-    // CASE 2
+
+            // CASE 2
             const startBgColor = { r: 255, g: 255, b: 255 }; // white
             const endBgColor = { r: 190, g: 230, b: 238 }; // #BEE6EE
 
@@ -46,13 +48,14 @@ document.addEventListener("DOMContentLoaded", function() {
             const rSvg = Math.floor(startSvgColor.r + (endSvgColor.r - startSvgColor.r) * scrollRatioSvg);
             const gSvg = Math.floor(startSvgColor.g + (endSvgColor.g - startSvgColor.g) * scrollRatioSvg);
             const bSvg = Math.floor(startSvgColor.b + (endSvgColor.b - startSvgColor.b) * scrollRatioSvg);
-            const svgElements = document.querySelectorAll("svg path, svg rect, svg circle");
+            const svgElements = document.querySelectorAll("svg:not(.svg-opp) path, svg:not(.svg-opp) rect, svg:not(.svg-opp) circle");
             svgElements.forEach(element => {
                 element.setAttribute("fill", `rgb(${rSvg}, ${gSvg}, ${bSvg})`);
             });
 
         } else if (caseSelected === 2) {
-    // CASE 3
+
+            // CASE 3
             const startBgColor = { r: 255, g: 255, b: 255 }; // white
             const endBgColor = { r: 195, g: 165, b: 245 };  // #C3A5F5
 
@@ -67,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
             const rSvg = Math.floor(startSvgColor.r + (endSvgColor.r - startSvgColor.r) * scrollRatioSvg);
             const gSvg = Math.floor(startSvgColor.g + (endSvgColor.g - startSvgColor.g) * scrollRatioSvg);
             const bSvg = Math.floor(startSvgColor.b + (endSvgColor.b - startSvgColor.b) * scrollRatioSvg);
-            const svgElements = document.querySelectorAll("svg path, svg rect, svg circle");
+            const svgElements = document.querySelectorAll("svg:not(.svg-opp) path, svg:not(.svg-opp) rect, svg:not(.svg-opp) circle");
             svgElements.forEach(element => {
                 element.setAttribute("fill", `rgb(${rSvg}, ${gSvg}, ${bSvg})`);
             });
