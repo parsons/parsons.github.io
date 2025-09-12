@@ -85,10 +85,10 @@ h3, h4 {
 }
 
 .dot {
-  height: 130px;
-  width: 130px;
-  background-color: #D5DF35;
-  color: black;
+  height: 140px;
+  width: 140px;
+  background-color: #F69AC1;
+  color: #D1206E;
   border-radius: 50%;
   display: inline-flex;
   margin-left: 190px;
@@ -105,7 +105,7 @@ h3, h4 {
 .little-dot {
   height: 30px;
   width: 30px;
-  background-color: #D5DF35;
+  background-color: #F69AC1;
   border-radius: 50%;
   display: inline-block;
   position: absolute;
@@ -226,9 +226,10 @@ h4:hover {
     position: absolute; 
     bottom: 60px; 
     right: 20px; 
-    height: 100px;
-    width: 100px;
-    background-color: #D5DF35;
+    height: 110px;
+    width: 110px;
+    background-color: #F69AC1;
+    color:#D1206E;
     border-radius: 50%;
     align-items: center; 
     justify-content: center;
@@ -293,7 +294,7 @@ h4:hover {
   .m-little-dot {
       height: 15px;
       width: 15px;
-      background-color: #D5DF35;
+      background-color: #F69AC1;
       border-radius: 50%;
       display: inline-block;
       position: absolute;
