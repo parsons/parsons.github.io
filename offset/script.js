@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // CASE 1
             const startBgColor = { r: 255, g: 255, b: 255 }; // white
-            const endBgColor = { r: 254, g: 178, b: 206 }; // #FEB2CE
+            const endBgColor = { r: 167, g: 220, b: 251 }; // #A7DCFB
 
             const rBg = Math.floor(startBgColor.r + (endBgColor.r - startBgColor.r) * scrollRatioBg);
             const gBg = Math.floor(startBgColor.g + (endBgColor.g - startBgColor.g) * scrollRatioBg);
@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.body.style.backgroundColor = `rgb(${rBg}, ${gBg}, ${bBg})`;
 
             const startSvgColor = { r: 0, g: 0, b: 0 }; // black
-            const endSvgColor = { r: 245, g: 91, b: 29 }; // #F55B1D
+            const endSvgColor = { r: 131, g: 69, b: 54 }; // #834536
 
             const rSvg = Math.floor(startSvgColor.r + (endSvgColor.r - startSvgColor.r) * scrollRatioSvg);
             const gSvg = Math.floor(startSvgColor.g + (endSvgColor.g - startSvgColor.g) * scrollRatioSvg);
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // CASE 2
             const startBgColor = { r: 255, g: 255, b: 255 }; // white
-            const endBgColor = { r: 190, g: 230, b: 238 }; // #BEE6EE
+            const endBgColor = { r: 245, g: 91, b: 29 }; // #F5EC69
 
             const rBg = Math.floor(startBgColor.r + (endBgColor.r - startBgColor.r) * scrollRatioBg);
             const gBg = Math.floor(startBgColor.g + (endBgColor.g - startBgColor.g) * scrollRatioBg);
@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.body.style.backgroundColor = `rgb(${rBg}, ${gBg}, ${bBg})`;
 
             const startSvgColor = { r: 0, g: 0, b: 0 }; // black
-            const endSvgColor = { r: 0, g: 136, b: 72 }; // #008848
+            const endSvgColor = { r: 245, g: 236, b: 105 }; // #F55B1D
 
             const rSvg = Math.floor(startSvgColor.r + (endSvgColor.r - startSvgColor.r) * scrollRatioSvg);
             const gSvg = Math.floor(startSvgColor.g + (endSvgColor.g - startSvgColor.g) * scrollRatioSvg);
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // CASE 3
             const startBgColor = { r: 255, g: 255, b: 255 }; // white
-            const endBgColor = { r: 195, g: 165, b: 245 };  // #C3A5F5
+            const endBgColor = { r: 246, g: 154, b: 193 };  // #F69AC1
 
             const rBg = Math.floor(startBgColor.r + (endBgColor.r - startBgColor.r) * scrollRatioBg);
             const gBg = Math.floor(startBgColor.g + (endBgColor.g - startBgColor.g) * scrollRatioBg);
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.body.style.backgroundColor = `rgb(${rBg}, ${gBg}, ${bBg})`;
 
             const startSvgColor = { r: 0, g: 0, b: 0 }; // black
-            const endSvgColor = { r: 190, g: 230, b: 238 }; // #BEE6EE
+            const endSvgColor = { r: 209, g: 32, b: 110 }; // #D1206E
 
             const rSvg = Math.floor(startSvgColor.r + (endSvgColor.r - startSvgColor.r) * scrollRatioSvg);
             const gSvg = Math.floor(startSvgColor.g + (endSvgColor.g - startSvgColor.g) * scrollRatioSvg);
