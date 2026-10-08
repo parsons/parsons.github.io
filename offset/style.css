@@ -1,0 +1,410 @@
+/* ------------------------------------------------------------------
+   THEME — change colors and spacing here; script.js reads these too.
+
+   Breakpoints (each section keeps its own media queries):
+     ≤1200px  block titles move above their text
+      ≤700px  block text goes to one column
+      ≤450px  phone: full-screen header with the logo on its side
+   ------------------------------------------------------------------ */
+:root {
+  /* page colors before scrolling */
+  --color-bg: white;
+  --color-text: black;
+  --color-shape: black;     /* the black blocks */
+  --color-logo: #0A0421;
+
+  /* accents */
+  --color-pink: #F69AC1;
+  --color-pink-dark: #D1206E;
+
+  /* link hover colors, by what the link sits on. script.js replaces these as
+     the theme fades in; these are the fallbacks if the script doesn't run.
+     Hover is whichever theme color contrasts most with the background (darker
+     on light backgrounds, lighter on dark ones), or pink if that's too close
+     to the text color. */
+  --hover-on-bg: var(--color-pink-dark);    /* page background */
+  --hover-on-shape: var(--color-pink);      /* black shapes: Exhibitors, footer */
+  --hover-on-pink: var(--color-text);       /* Register button */
+
+  /* scroll themes: one is picked at random per visit, and the page background
+     and blocks fade to its colors as you scroll. Add or remove themes by
+     numbering them 1, 2, 3… with no gaps. Text stays black, so both colors
+     need at least 4.5:1 contrast with black (WCAG AA for body text). */
+  --theme-1-bg: #ED74B9;     /* pink / yellow */
+  --theme-1-shape: #FBEA6F;
+  /* off for now — to turn back on, remove the comment markers around these lines
+  --theme-2-bg: #B460CE;     purple / mint
+  --theme-2-shape: #D2FDCE;
+  --theme-3-bg: #D2FDCE;     mint / purple
+  --theme-3-shape: #B460CE;
+  --theme-4-bg: #ED7742;     orange / yellow
+  --theme-4-shape: #FBEA6F;
+  */
+
+  /* page */
+  --page-pad: 30px;                       /* left/right page margin */
+
+  /* content blocks (Information / Exhibitors / Support Us) */
+  --block-pad-y: 80px;                    /* space below a block's content */
+  --caret-gap: 56px;                      /* from the point of a shape's caret down to the next title */
+  --notch-depth: 3.49vw;                  /* how far the notch dips into the top of a block with a shape */
+  --block-min-height: 50vh;               /* blocks grow past this as content grows */
+  --block-gap: clamp(24px, 6vw, 96px);    /* between title and body, and between columns */
+  --heading-gap: 40px;                    /* title to body, when the title sits on top */
+  --para-gap: 1em;                        /* between paragraphs (relative to body text size) */
+  --block-title-size: xx-large;
+  --block-text-size: x-large;
+  --tab-height: 4.75vw;                   /* the tab hanging off the bottom of a block with a shape */
+}
+
+@media (max-width: 450px) {
+  :root {
+    --page-pad: 20px;
+    --block-pad-y: 48px;
+    --caret-gap: 42px;
+    --notch-depth: 2.91vw;
+    --block-min-height: 40vh;
+    --heading-gap: 20px;
+    --block-title-size: large;
+    --block-text-size: small;
+    --tab-height: 3.63vw;
+  }
+}
+
+/* ------------------------------------------------------------------
+   BASE
+   ------------------------------------------------------------------ */
+
+/* add the `hidden` attribute to any element to take it off the page */
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-current, var(--color-bg));
+  color: var(--color-text);
+  font-family: stevie-sans, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: var(--hover-on-bg);
+}
+
+/* every shape takes the current scroll color (set by script.js) */
+svg path,
+svg rect {
+  fill: var(--shape-current, var(--color-shape));
+}
+
+/* ------------------------------------------------------------------
+   HEADER — event details, Register button and logo.
+   Wide screens: details across the top, logo below.
+   ≤450px: fills the screen, details on two sides, logo on its side.
+   ------------------------------------------------------------------ */
+.site-header {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: minmax(max(20vh, 100px), auto) auto;
+  column-gap: 20px;
+  padding: var(--page-pad);
+}
+
+/* sits in the header's first two columns and lines up with them */
+.event-info {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: subgrid;
+  font-size: medium;
+}
+
+.event-info p,
+.event-info address {
+  margin: 1em 0;
+  font-style: normal;
+}
+
+.register-button {
+  grid-column: 4;
+  justify-self: end;
+  align-self: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: var(--color-pink);
+  color: var(--color-pink-dark);
+  font-size: x-large;
+}
+
+.register-button:hover {
+  color: var(--hover-on-pink);
+}
+
+.logo {
+  grid-column: 1 / -1;
+  display: block;
+  width: min(95vw, 100%);
+  height: auto;
+}
+
+.logo path {
+  fill: var(--shape-current, var(--color-logo));
+}
+
+@media (max-width: 450px) {
+  .site-header {
+    position: relative;
+    box-sizing: border-box;
+    height: 100vh;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+  }
+
+  /* the two columns dissolve so their four items can be rearranged */
+  .event-info {
+    grid-column: auto;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "title hosts"
+      "place date";
+    justify-content: space-between;
+    gap: 1em 20px;
+    padding-block: 1em;
+    font-size: x-small;
+    font-weight: 450;
+  }
+
+  .event-info__col {
+    display: contents;
+  }
+
+  .event-info p,
+  .event-info address {
+    margin: 0;
+  }
+
+  .event-info__title { grid-area: title; }
+  .event-info__hosts { grid-area: hosts; text-align: right; }
+  .event-info__place { grid-area: place; }
+  .event-info__date  { grid-area: date;  text-align: right; }
+
+  .register-button {
+    grid-column: auto;
+    position: absolute;
+    right: var(--page-pad);
+    bottom: 60px;
+    width: 110px;
+    height: 110px;
+    font-size: large;
+  }
+
+  .logo {
+    width: 90vw;
+    place-self: center;
+    transform: translateY(-10vh) rotate(270deg);
+  }
+}
+
+/* the band under the header sizes itself from the shape's proportions */
+.band {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 15vh;
+}
+
+@media (max-width: 450px) {
+  .band {
+    margin-top: 0;
+  }
+}
+
+/* ------------------------------------------------------------------
+   CONTENT BLOCK — Information, Exhibitors and Support Us all use this.
+   Wide screens: title on the left, body on the right.
+   ≤1200px: title on top.   ≤700px: one column of text.
+   ------------------------------------------------------------------ */
+.block {
+  position: relative;
+  box-sizing: border-box;
+  min-height: var(--block-min-height);
+  /* every block follows a caret pointing down at it, so the top is measured from that point */
+  padding: var(--caret-gap) var(--page-pad) var(--block-pad-y);
+  display: grid;
+  grid-template-columns: minmax(max-content, 1fr) minmax(0, 4fr);
+  align-content: start;
+  column-gap: var(--block-gap);
+  row-gap: var(--heading-gap);
+  overflow-wrap: break-word;
+}
+
+.block-title {
+  margin: 0;
+  font-size: var(--block-title-size);
+  font-weight: 400;
+}
+
+.block-body {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: start;
+  column-gap: var(--block-gap);
+  row-gap: var(--para-gap);
+  font-size: var(--block-text-size);
+}
+
+.block-col p {
+  margin: 0 0 var(--para-gap);
+}
+
+.block-col p:last-child {
+  margin-bottom: 0;
+}
+
+.block-col--wide,
+.block-list {
+  grid-column: 1 / -1;
+}
+
+.block-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 3;
+  column-gap: var(--block-gap);
+}
+
+.block-list li {
+  break-inside: avoid;
+}
+
+.block-body a {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .block {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .block-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .block-list {
+    columns: 2;
+  }
+}
+
+/* ------------------------------------------------------------------
+   SHAPE — a black background cut to a shape. Put a .shape as the first
+   child of anything (a .block, the footer) and it sits behind that
+   element's content. The top and bottom pieces keep their proportions
+   and a .shape-fill in between stretches to fit the content.
+   .shape-wide / .shape-narrow pieces swap at ≤450px.
+   ------------------------------------------------------------------ */
+
+/* whatever holds a shape keeps it behind its own content, not the page's */
+:has(> .shape) {
+  isolation: isolate;
+}
+
+:has(> .shape) a:hover {
+  color: var(--hover-on-shape);
+}
+
+/* a block with a shape makes room for the notch dipping into its top
+   and the tab hanging off its bottom */
+.block:has(> .shape) {
+  min-height: calc(var(--block-min-height) + var(--tab-height));
+  padding-top: calc(var(--notch-depth) + var(--caret-gap));
+  padding-bottom: calc(var(--block-pad-y) + var(--tab-height));
+}
+
+.shape {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+}
+
+.shape svg {
+  display: block;
+  flex: none;
+  width: 100%;
+  height: auto;
+}
+
+.shape .shape-narrow {
+  display: none;
+}
+
+.shape .shape-fill {
+  flex: 1 1 auto;
+  height: 0;
+  margin: -1px 0; /* hide hairline seams between the pieces */
+}
+
+@media (max-width: 450px) {
+  .shape .shape-wide {
+    display: none;
+  }
+
+  .shape .shape-narrow {
+    display: block;
+  }
+}
+
+/* ------------------------------------------------------------------
+   FOOTER — links on a black shape with a notch cut into the top.
+   ------------------------------------------------------------------ */
+.site-footer {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  aspect-ratio: 1364 / 166; /* the proportions of the footer shape */
+  font-size: medium;
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 0.75em;
+  padding: 0 var(--page-pad) 1.33em;
+}
+
+.site-footer__dot {
+  position: absolute;
+  right: 2vw;
+  bottom: 2.2vh;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-pink);
+}
+
+@media (max-width: 450px) {
+  .site-footer {
+    aspect-ratio: auto;
+    min-height: 28vh;
+    font-size: x-small;
+  }
+
+  .site-footer__dot {
+    right: 4vw;
+    bottom: 1vh;
+    width: 15px;
+    height: 15px;
+  }
+}
